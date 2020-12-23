@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="https://www.thymeleaf.org" lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>My Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Description for My Application">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png">
+        <link rel="stylesheet" href="/main.css"/>
+        <link rel="stylesheet" href="/index.min.css"/>
+    </head>
+    <body>
+        <h1>The title!</h1>
+        <div id="app"></div>
+        <script th:inline="javascript">
+            function loadApp() {
+                MyApp.mountApp({
+                    containerId: "app"
+                })
+            }
+        </script>
+        <script src="built/MyApp.js" onload="loadApp()"></script>
+    </body>
+</html>

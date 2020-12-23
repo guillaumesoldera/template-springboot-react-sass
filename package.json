@@ -1,0 +1,38 @@
+{
+  "name": "springboot-react-sass-template",
+  "version": "0.1.0",
+  "description": "Template SpringBoot React Sass",
+  "engines": {
+    "node": "12.x.x"
+  },
+  "scripts": {
+    "clean-css": "rimraf ./target/classes/static/fonts/* & rimraf ./target/classes/static/index.min.css",
+    "clean-js": "rimraf ./target/classes/static/built/* & rimraf ./src/main/resources/static/built/*",
+    "clean": "yarn run clean-js && yarn run clean-css",
+    "watch": "webpack --watch -d --output-path ./target/classes/static/"
+  },
+  "dependencies": {
+    "@clevercloud/components": "^5.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.12.5",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "glob-all": "^3.2.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "node-sass": "4.12.0",
+    "purgecss-webpack-plugin": "3.0.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
